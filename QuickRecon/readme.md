@@ -13,15 +13,13 @@ Finally the user's browser data (history, bookmarks, etc) is dumped to a series 
 
 Even on computers with a lot of browser data, this shouldn't take much longer than 15 seconds.
 
-## Decrypting Firefox Stored Passwords
+## Viewing Browser Databases
 
-If the loot includes Firefox data, you can decrypt the ky database to recover stored usernames and passwords for websites.
-Download and install the following github repo:
-https://github.com/unode/firefox_decrypt
-If you don't already have Python3 install that as well.
-Then, in terminal/shell: python firefox_decrypt.py /folder/containing/profile/
+I use DB Browser for SQLite.  You can open the browser database files, and export the relevant tables to csv files.
 
-Still working on how to do this with Chrome... hope to have that solved in v3.0
+## Decrypting Browser Stored Passwords
+
+There are a few ways to do this, but the simplest is using WebBrowerPassView from nirsoft (nirsoft.net).  You can point the program to the /loot/QuickRecon folder on the BashBunny and it will automatically pull the passwords stored in the databses.
 
 ## Status
 
