@@ -1,0 +1,19 @@
+bRunning="1"
+while [ $bRunning -eq "1" ]; do
+	# Do your jazz here
+	if [ -f "file" ]; then
+		bRunning="0"
+	fi
+done
+# File exists; jazz complete
+
+
+#This one be an example of getting the BashBunny USB drive letter which you probably already done.
+
+$BB = (gwmi -class win32_volume -f {label = "BASHBUNNY"}).DriveLetter
+
+
+#Do all your junk and after you write that done file do this.
+
+$Eject = (new-object -ComObject Shell.Application).Namespace(17)
+$Eject.ParseName($BB).InvokeVerb("Eject")
