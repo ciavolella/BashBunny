@@ -43,11 +43,8 @@ PowerShell.exe -ExecutionPolicy Bypass -File info.ps1 > $backupPath
 $TARGETDIR = $backupDrive + "\loot\QuickRecon\" + $computerSystem.Name
 
 # Dump a directory tree of the User directory in Windows
-# If you are pressed for time, this section takes the longest and should be modified or commented out.
 tree /a /f $env:userprofile >> $TARGETDIR\recon.txt
-echo ================================================================================= >> $TARGETDIR\recon.txt
 echo =====================================AppData===================================== >> $TARGETDIR\recon.txt
-echo ================================================================================= >> $TARGETDIR\recon.txt
 tree /a $env:userprofile\AppData >> $TARGETDIR\recon.txt
 
 # Create folders necessary for Browser Info Dump
